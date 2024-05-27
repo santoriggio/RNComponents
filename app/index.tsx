@@ -2,6 +2,8 @@ import { StyleSheet, View } from "react-native";
 import Box from "../RNComponents/components/Box";
 import useStyles from "../RNComponents/hooks/useStyles";
 import Text from "../RNComponents/components/Text";
+import formatDate from "../RNComponents/utils/formatDate";
+import Button from "../RNComponents/components/Button";
 export default function Page() {
   const { colors } = useStyles();
   return (
@@ -9,10 +11,11 @@ export default function Page() {
       <Box backgroundColor="red" margin="s">
         <Text>Hello world from Box!</Text>
       </Box>
-
-      <Box backgroundColor="red" margin="s">
+      <Text marginLeft="m">{formatDate("LLL", new Date())}</Text>
+      <Box backgroundColor="red" margin="m">
         <Text>Hello world from Box!</Text>
       </Box>
+      <Button title='Button!'onPress={()=>console.log('Pressed')}/>
     </View>
   );
 }

@@ -3,7 +3,7 @@ import useStyles, { Styles, spacingSizes } from "../hooks/useStyles";
 import { PropsWithChildren, useMemo } from "react";
 
 type BoxProps = {
-  backgroundColor?: string;
+  backgroundColor?: ColorValue;
   horizontal?: boolean;
 } & SpacingProps &
   ViewProps;
